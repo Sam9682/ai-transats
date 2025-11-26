@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="dsEmployes" targetNamespace="http://www.tempuri.org/dsEmployes.xsd" xmlns:mstns="http://www.tempuri.org/dsEmployes.xsd" xmlns="http://www.tempuri.org/dsEmployes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="dsEmployes" msdata:IsDataSet="true" msdata:Locale="fr-FR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="Employe">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NumEmploye" type="xs:short" />
+              <xs:element name="NomEmploye" type="xs:string" minOccurs="0" />
+              <xs:element name="PrenomEmploye" type="xs:string" minOccurs="0" />
+              <xs:element name="Salaire" type="xs:float" minOccurs="0" />
+              <xs:element name="TelEmploye" type="xs:string" minOccurs="0" />
+              <xs:element name="poste" type="xs:string" minOccurs="0" />
+              <xs:element name="motdePasse" type="xs:string" minOccurs="0" />
+              <xs:element name="Alias" type="xs:string" minOccurs="0" />
+              <xs:element name="AdresseEmploye" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Employe" />
+      <xs:field xpath="mstns:NumEmploye" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

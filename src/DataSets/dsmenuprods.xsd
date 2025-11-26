@@ -1,0 +1,22 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="dsmenuprods" targetNamespace="http://www.tempuri.org/dsmenuprods.xsd" xmlns:mstns="http://www.tempuri.org/dsmenuprods.xsd" xmlns="http://www.tempuri.org/dsmenuprods.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="dsmenuprods" msdata:IsDataSet="true" msdata:Locale="fr-FR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="Menu">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LibelleProduit" type="xs:string" minOccurs="0" />
+              <xs:element name="NomMenu" type="xs:string" minOccurs="0" />
+              <xs:element name="RefMenu" type="xs:int" minOccurs="0" />
+              <xs:element name="PrixUnit" type="xs:string" minOccurs="0" />
+              <xs:element name="RefProduit" type="xs:int" minOccurs="0" />
+              <xs:element name="TypeProduit" type="xs:string" minOccurs="0" />
+              <xs:element name="CleMenu" msdata:AutoIncrement="true" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,233 @@
+@model IEnumerable<TransactsWeb.Models.Transat>
+@{
+    ViewData["Title"] = "Gestion des Transats";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2><i class="fas fa-umbrella-beach"></i> Gestion des Transats</h2>
+    <div>
+        <button class="btn btn-success" onclick="toggleReservationMode()">
+            <i class="fas fa-calendar-plus"></i> Mode Réservation
+        </button>
+        <button class="btn btn-primary" onclick="toggleCreateMode()">
+            <i class="fas fa-plus"></i> Créer Transat
+        </button>
+    </div>
+</div>
+
+<!-- Légende -->
+<div class="card mb-3">
+    <div class="card-body">
+        <div class="row text-center">
+            <div class="col-md-3">
+                <span class="transat libre">1</span> Libre
+            </div>
+            <div class="col-md-3">
+                <span class="transat reserve">2</span> Réservé
+            </div>
+            <div class="col-md-3">
+                <span class="transat occupe">3</span> Occupé
+            </div>
+            <div class="col-md-3">
+                <span class="transat selected">4</span> Sélectionné
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Zone des transats -->
+<div class="card">
+    <div class="card-body">
+        <div class="beach-grid" id="beachGrid" style="min-height: 500px; position: relative;">
+            @foreach (var transat in Model)
+            {
+                <div class="transat @(transat.EtatCourant == 0 ? "libre" : transat.EtatCourant == 1 ? "reserve" : "occupe")"
+                     data-id="@transat.NumTransat"
+                     data-x="@transat.PosX"
+                     data-y="@transat.PosY"
+                     style="position: absolute; left: @(transat.PosX * 42)px; top: @(transat.PosY * 70)px;"
+                     onclick="selectTransat(@transat.NumTransat, @transat.PosX, @transat.PosY, @transat.EtatCourant)">
+                    @transat.NumTransat
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<!-- Réservations du jour -->
+<div class="card mt-4">
+    <div class="card-header">
+        <h5><i class="fas fa-calendar-day"></i> Réservations d'aujourd'hui</h5>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th>Transat</th>
+                        <th>Client</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var reservation in ViewBag.ReservationsToday)
+                    {
+                        <tr>
+                            <td>@reservation.NumTransat</td>
+                            <td>@reservation.Client.PrenomClient @reservation.Client.NomClient</td>
+                            <td>@reservation.DateReservation.ToString("dd/MM/yyyy HH:mm")</td>
+                            <td>
+                                <button class="btn btn-sm btn-success" onclick="occupyTransat(@reservation.NumTransat)">
+                                    Occuper
+                                </button>
+                                <button class="btn btn-sm btn-warning" onclick="freeTransat(@reservation.NumTransat)">
+                                    Libérer
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Réservation -->
+<div class="modal fade" id="reservationModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Nouvelle Réservation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="reservationForm">
+                    <input type="hidden" id="transatId" />
+                    <div class="mb-3">
+                        <label class="form-label">Client</label>
+                        <select id="clientSelect" class="form-select" required>
+                            <option value="">Sélectionner un client...</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Date de réservation</label>
+                        <input type="datetime-local" id="dateReservation" class="form-control" required />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                <button type="button" class="btn btn-primary" onclick="saveReservation()">Réserver</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        let createMode = false;
+        let reservationMode = false;
+        let selectedTransat = null;
+
+        function toggleCreateMode() {
+            createMode = !createMode;
+            reservationMode = false;
+            updateModeDisplay();
+        }
+
+        function toggleReservationMode() {
+            reservationMode = !reservationMode;
+            createMode = false;
+            updateModeDisplay();
+            if (reservationMode) {
+                loadClients();
+            }
+        }
+
+        function updateModeDisplay() {
+            const grid = document.getElementById('beachGrid');
+            if (createMode) {
+                grid.style.cursor = 'crosshair';
+                grid.onclick = handleGridClick;
+            } else {
+                grid.style.cursor = 'default';
+                grid.onclick = null;
+            }
+        }
+
+        function handleGridClick(e) {
+            if (!createMode) return;
+            
+            const rect = e.currentTarget.getBoundingClientRect();
+            const x = Math.floor((e.clientX - rect.left) / 42);
+            const y = Math.floor((e.clientY - rect.top) / 70);
+            
+            if (confirm(`Créer un transat à la position (${x}, ${y}) ?`)) {
+                $.post('@Url.Action("CreateTransat")', { posX: x, posY: y }, function() {
+                    location.reload();
+                });
+            }
+        }
+
+        function selectTransat(id, x, y, etat) {
+            if (createMode) return;
+            
+            // Désélectionner tous les transats
+            document.querySelectorAll('.transat').forEach(t => t.classList.remove('selected'));
+            
+            // Sélectionner le transat cliqué
+            event.target.classList.add('selected');
+            selectedTransat = { id, x, y, etat };
+            
+            if (reservationMode && etat === 0) {
+                document.getElementById('transatId').value = id;
+                new bootstrap.Modal(document.getElementById('reservationModal')).show();
+            }
+        }
+
+        function loadClients() {
+            $.get('@Url.Action("GetClients")', function(clients) {
+                const select = document.getElementById('clientSelect');
+                select.innerHTML = '<option value="">Sélectionner un client...</option>';
+                clients.forEach(client => {
+                    select.innerHTML += `<option value="${client.numClient}">${client.name}</option>`;
+                });
+            });
+        }
+
+        function saveReservation() {
+            const transatId = document.getElementById('transatId').value;
+            const clientId = document.getElementById('clientSelect').value;
+            const dateReservation = document.getElementById('dateReservation').value;
+            
+            if (!clientId || !dateReservation) {
+                alert('Veuillez remplir tous les champs');
+                return;
+            }
+            
+            $.post('@Url.Action("Reserve")', {
+                transatId: transatId,
+                clientId: clientId,
+                dateReservation: dateReservation
+            }, function() {
+                location.reload();
+            });
+        }
+
+        function occupyTransat(transatId) {
+            $.post('@Url.Action("Occupy")', { transatId: transatId }, function() {
+                location.reload();
+            });
+        }
+
+        function freeTransat(transatId) {
+            $.post('@Url.Action("Free")', { transatId: transatId }, function() {
+                location.reload();
+            });
+        }
+
+        // Initialiser la date par défaut
+        document.getElementById('dateReservation').value = new Date().toISOString().slice(0, 16);
+    </script>
+}

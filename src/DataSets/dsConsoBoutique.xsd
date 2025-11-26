@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="dsConsoBoutique" targetNamespace="http://www.tempuri.org/dsConsoBoutique.xsd" xmlns:mstns="http://www.tempuri.org/dsConsoBoutique.xsd" xmlns="http://www.tempuri.org/dsConsoBoutique.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="dsConsoBoutique" msdata:IsDataSet="true" msdata:Locale="fr-FR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="Produit">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Qte" type="xs:int" minOccurs="0" />
+              <xs:element name="LibelleProduit" type="xs:string" minOccurs="0" />
+              <xs:element name="PrixUnit" type="xs:float" minOccurs="0" />
+              <xs:element name="NumConso" type="xs:int" minOccurs="0" />
+              <xs:element name="RefProduit" type="xs:int" minOccurs="0" />
+              <xs:element name="RefProd" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

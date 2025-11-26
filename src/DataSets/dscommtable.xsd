@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="dscommtable" targetNamespace="http://www.tempuri.org/dscommtable.xsd" xmlns:mstns="http://www.tempuri.org/dscommtable.xsd" xmlns="http://www.tempuri.org/dscommtable.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="dscommtable" msdata:IsDataSet="true" msdata:Locale="fr-FR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="Commande">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Numero_x0020_Table" type="xs:int" minOccurs="0" />
+              <xs:element name="Num_x0020_Client" type="xs:int" minOccurs="0" />
+              <xs:element name="NumCommande" msdata:AutoIncrement="true" type="xs:int" minOccurs="0" />
+              <xs:element name="NumTable" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

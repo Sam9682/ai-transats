@@ -1,0 +1,24 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="dsActivites" targetNamespace="http://www.tempuri.org/dsActivites.xsd" xmlns:mstns="http://www.tempuri.org/dsActivites.xsd" xmlns="http://www.tempuri.org/dsActivites.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="dsActivites" msdata:IsDataSet="true" msdata:Locale="fr-FR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="Activite">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Code_x0020_Activité" type="xs:int" />
+              <xs:element name="Nom_x0020_Activité" type="xs:string" minOccurs="0" />
+              <xs:element name="Date_x0020_de_x0020_Début" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Date_x0020_Fin" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Nombre_x0020_de_x0020_places_x0020_disponibles" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Activite" />
+      <xs:field xpath="mstns:Code_x0020_Activité" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

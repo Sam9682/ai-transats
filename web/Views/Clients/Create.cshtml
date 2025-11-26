@@ -1,0 +1,66 @@
+@model TransactsWeb.Models.Client
+@{
+    ViewData["Title"] = "Nouveau Client";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h4><i class="fas fa-user-plus"></i> Nouveau Client</h4>
+            </div>
+            <div class="card-body">
+                <form asp-action="Create">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label asp-for="NomClient" class="form-label">Nom *</label>
+                                <input asp-for="NomClient" class="form-control" />
+                                <span asp-validation-for="NomClient" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label asp-for="PrenomClient" class="form-label">Prénom *</label>
+                                <input asp-for="PrenomClient" class="form-control" />
+                                <span asp-validation-for="PrenomClient" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label asp-for="TelClient" class="form-label">Téléphone</label>
+                                <input asp-for="TelClient" class="form-control" />
+                                <span asp-validation-for="TelClient" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label asp-for="MailClient" class="form-label">Email</label>
+                                <input asp-for="MailClient" type="email" class="form-control" />
+                                <span asp-validation-for="MailClient" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="AdresseClient" class="form-label">Adresse</label>
+                        <textarea asp-for="AdresseClient" class="form-control" rows="3"></textarea>
+                        <span asp-validation-for="AdresseClient" class="text-danger"></span>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <a href="@Url.Action("Index")" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i> Retour
+                        </a>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i> Enregistrer
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

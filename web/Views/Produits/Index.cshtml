@@ -1,0 +1,111 @@
+@model IEnumerable<TransactsWeb.Models.Produit>
+@{
+    ViewData["Title"] = ViewBag.Title;
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2><i class="fas fa-box"></i> @ViewBag.Title</h2>
+    <a href="@Url.Action("Create", new { type = ViewBag.Type })" class="btn btn-primary">
+        <i class="fas fa-plus"></i> Nouveau Produit
+    </a>
+</div>
+
+<!-- Navigation des types -->
+<div class="card mb-4">
+    <div class="card-body">
+        <div class="btn-group w-100" role="group">
+            <a href="@Url.Action("Index", new { type = "Restaurant" })" 
+               class="btn @(ViewBag.Type == "Restaurant" ? "btn-primary" : "btn-outline-primary")">
+                <i class="fas fa-utensils"></i> Restaurant
+            </a>
+            <a href="@Url.Action("Index", new { type = "Bar" })" 
+               class="btn @(ViewBag.Type == "Bar" ? "btn-primary" : "btn-outline-primary")">
+                <i class="fas fa-cocktail"></i> Bar
+            </a>
+            <a href="@Url.Action("Index", new { type = "Snack" })" 
+               class="btn @(ViewBag.Type == "Snack" ? "btn-primary" : "btn-outline-primary")">
+                <i class="fas fa-hamburger"></i> Snack
+            </a>
+            <a href="@Url.Action("Index", new { type = "Boutique" })" 
+               class="btn @(ViewBag.Type == "Boutique" ? "btn-primary" : "btn-outline-primary")">
+                <i class="fas fa-shopping-bag"></i> Boutique
+            </a>
+            <a href="@Url.Action("Index", new { type = "BaseNautique" })" 
+               class="btn @(ViewBag.Type == "BaseNautique" ? "btn-primary" : "btn-outline-primary")">
+                <i class="fas fa-ship"></i> Base Nautique
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Liste des produits -->
+<div class="row">
+    @foreach (var produit in Model)
+    {
+        <div class="col-md-6 col-lg-4 mb-3">
+            <div class="card @(produit.Disponible ? "" : "bg-light")">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h5 class="card-title">@produit.NomProduit</h5>
+                        <span class="badge @(produit.Disponible ? "bg-success" : "bg-secondary")">
+                            @(produit.Disponible ? "Disponible" : "Indisponible")
+                        </span>
+                    </div>
+                    
+                    <p class="card-text">
+                        <strong>Prix:</strong> @produit.Prix.ToString("C")<br>
+                        @if (!string.IsNullOrEmpty(produit.Categorie))
+                        {
+                            <strong>Catégorie:</strong> @produit.Categorie
+                        }
+                    </p>
+                    
+                    <div class="btn-group w-100" role="group">
+                        <a href="@Url.Action("Edit", new { id = produit.NumProduit })" 
+                           class="btn btn-sm btn-outline-primary">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <button type="button" class="btn btn-sm @(produit.Disponible ? "btn-outline-warning" : "btn-outline-success")" 
+                                onclick="toggleDisponibilite(@produit.NumProduit)">
+                            <i class="fas @(produit.Disponible ? "fa-eye-slash" : "fa-eye")"></i>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-outline-danger" 
+                                onclick="deleteProduit(@produit.NumProduit)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@if (!Model.Any())
+{
+    <div class="text-center py-5">
+        <i class="fas fa-box-open fa-3x text-muted mb-3"></i>
+        <h4 class="text-muted">Aucun produit trouvé</h4>
+        <p class="text-muted">Commencez par ajouter votre premier produit.</p>
+        <a href="@Url.Action("Create", new { type = ViewBag.Type })" class="btn btn-primary">
+            <i class="fas fa-plus"></i> Ajouter un produit
+        </a>
+    </div>
+}
+
+@section Scripts {
+    <script>
+        function toggleDisponibilite(produitId) {
+            $.post('@Url.Action("ToggleDisponibilite")', { id: produitId }, function() {
+                location.reload();
+            });
+        }
+
+        function deleteProduit(produitId) {
+            if (confirm('Êtes-vous sûr de vouloir supprimer ce produit ?')) {
+                $.post('@Url.Action("Delete")', { id: produitId }, function() {
+                    location.reload();
+                });
+            }
+        }
+    </script>
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="dsComm" targetNamespace="http://www.tempuri.org/dsComm.xsd" xmlns:mstns="http://www.tempuri.org/dsComm.xsd" xmlns="http://www.tempuri.org/dsComm.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="dsComm" msdata:IsDataSet="true" msdata:Locale="fr-FR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="Vin">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LibelleProduit" type="xs:string" minOccurs="0" />
+              <xs:element name="RefProduit" type="xs:int" minOccurs="0" />
+              <xs:element name="PrixUnit" type="xs:float" minOccurs="0" />
+              <xs:element name="TypeProduit" type="xs:string" minOccurs="0" />
+              <xs:element name="LibellePlat" type="xs:string" minOccurs="0" />
+              <xs:element name="PrixUnitaire" type="xs:float" minOccurs="0" />
+              <xs:element name="RefPlat" type="xs:int" minOccurs="0" />
+              <xs:element name="TypePlat" type="xs:string" minOccurs="0" />
+              <xs:element name="LibelleVin" type="xs:string" minOccurs="0" />
+              <xs:element name="Expr1" type="xs:float" minOccurs="0" />
+              <xs:element name="RefVin" type="xs:int" minOccurs="0" />
+              <xs:element name="TypeVin" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

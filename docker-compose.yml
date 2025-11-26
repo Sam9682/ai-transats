@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  transacts-web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+      - "8443:443"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=TransactsWebDb;User Id=sa;Password=YourStrong@Passw0rd;TrustServerCertificate=true
+    depends_on:
+      - sqlserver
+    networks:
+      - transacts-network
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=YourStrong@Passw0rd
+      - MSSQL_PID=Express
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+    networks:
+      - transacts-network
+
+volumes:
+  sqlserver_data:
+
+networks:
+  transacts-network:
+    driver: bridge

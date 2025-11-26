@@ -1,0 +1,952 @@
+<VisualStudioProject>
+    <CSHARP
+        ProjectType = "Local"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{B7672CF5-6E8C-432A-A438-BE4BCCFDF5E8}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = "App.ico"
+                AssemblyKeyContainerName = ""
+                AssemblyName = "Transacts"
+                AssemblyOriginatorKeyFile = ""
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "WinExe"
+                PreBuildEvent = ""
+                PostBuildEvent = ""
+                RootNamespace = "Transacts"
+                RunPostBuildEvent = "OnBuildSuccess"
+                StartupObject = "Transacts.Accueil"
+            >
+                <Config
+                    Name = "Debug"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "DEBUG;TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "true"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "true"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "false"
+                    OutputPath = "bin\Debug\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+                <Config
+                    Name = "Release"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "false"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "true"
+                    OutputPath = "bin\Release\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                    HintPath = "..\..\..\..\..\WINDOWS\Microsoft.NET\Framework\v1.0.3705\System.dll"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                    HintPath = "..\..\..\..\..\WINDOWS\Microsoft.NET\Framework\v1.0.3705\System.Data.dll"
+                />
+                <Reference
+                    Name = "System.Drawing"
+                    AssemblyName = "System.Drawing"
+                    HintPath = "..\..\..\..\..\WINDOWS\Microsoft.NET\Framework\v1.0.3705\System.Drawing.dll"
+                />
+                <Reference
+                    Name = "System.Windows.Forms"
+                    AssemblyName = "System.Windows.Forms"
+                    HintPath = "..\..\..\..\..\WINDOWS\Microsoft.NET\Framework\v1.0.3705\System.Windows.Forms.dll"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                    HintPath = "..\..\..\..\..\WINDOWS\Microsoft.NET\Framework\v1.0.3705\System.XML.dll"
+                />
+                <Reference
+                    Name = "Graphism"
+                    AssemblyName = "Graphism"
+                    HintPath = "bin\Debug\Graphism.dll"
+                />
+                <Reference
+                    Name = "system.web.services"
+                    AssemblyName = "System.Web.Services"
+                    HintPath = "..\..\..\..\..\windows\assembly\gac\system.web.services\1.0.3300.0__b03f5f7f11d50a3a\system.web.services.dll"
+                />
+                <Reference
+                    Name = "stdole"
+                    Guid = "{00020430-0000-0000-C000-000000000046}"
+                    VersionMajor = "2"
+                    VersionMinor = "0"
+                    Lcid = "0"
+                    WrapperTool = "primary"
+                />
+            </References>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "Accueil.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Accueil.resx"
+                    DependentUpon = "Accueil.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "AddActivite.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "AddActivite.resx"
+                    DependentUpon = "AddActivite.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "AddCoursStage.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "AddCoursStage.resx"
+                    DependentUpon = "AddCoursStage.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "AddModifMenu.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "AddModifMenu.resx"
+                    DependentUpon = "AddModifMenu.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "AddResto.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "AddResto.resx"
+                    DependentUpon = "AddResto.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "AjouTable.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "AjouTable.resx"
+                    DependentUpon = "AjouTable.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "AjoutClient.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "AjoutClient.resx"
+                    DependentUpon = "AjoutClient.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "AjoutCompte.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "AjoutCompte.resx"
+                    DependentUpon = "AjoutCompte.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "AjoutEmploye.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "AjoutEmploye.resx"
+                    DependentUpon = "AjoutEmploye.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "AjouterOption.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "AjouterOption.resx"
+                    DependentUpon = "AjouterOption.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "app.config"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "App.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "AssemblyInfo.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Bar.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Bar.resx"
+                    DependentUpon = "Bar.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "BaseNautique.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BaseNautique.resx"
+                    DependentUpon = "BaseNautique.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Boutique.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Boutique.resx"
+                    DependentUpon = "Boutique.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Caisse.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Caisse.resx"
+                    DependentUpon = "Caisse.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ChercherTable.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ChercherTable.resx"
+                    DependentUpon = "ChercherTable.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ChoisirClient.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ChoisirClient.resx"
+                    DependentUpon = "ChoisirClient.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Clavier.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Clavier.resx"
+                    DependentUpon = "Clavier.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "dsActivites.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsActivites.cs"
+                />
+                <File
+                    RelPath = "dsActivites.cs"
+                    DependentUpon = "dsActivites.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsAddClient.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsAddClient.cs"
+                />
+                <File
+                    RelPath = "dsAddClient.cs"
+                    DependentUpon = "dsAddClient.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsAjProduit.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsAjProduit.cs"
+                />
+                <File
+                    RelPath = "dsAjProduit.cs"
+                    DependentUpon = "dsAjProduit.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsChoisirClient.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsChoisirClient.cs"
+                />
+                <File
+                    RelPath = "dsChoisirClient.cs"
+                    DependentUpon = "dsChoisirClient.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsCliActivites.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsCliActivites.cs"
+                />
+                <File
+                    RelPath = "dsCliActivites.cs"
+                    DependentUpon = "dsCliActivites.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsClients.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsClients.cs"
+                />
+                <File
+                    RelPath = "dsClients.cs"
+                    DependentUpon = "dsClients.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsClientsCours.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsClientsCours.cs"
+                />
+                <File
+                    RelPath = "dsClientsCours.cs"
+                    DependentUpon = "dsClientsCours.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsClientsPaticipants.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsClientsPaticipants.cs"
+                />
+                <File
+                    RelPath = "dsClientsPaticipants.cs"
+                    DependentUpon = "dsClientsPaticipants.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsclires.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsclires.cs"
+                />
+                <File
+                    RelPath = "dsclires.cs"
+                    DependentUpon = "dsclires.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsComm.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsComm.cs"
+                />
+                <File
+                    RelPath = "dsComm.cs"
+                    DependentUpon = "dsComm.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dscommtable.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dscommtable.cs"
+                />
+                <File
+                    RelPath = "dscommtable.cs"
+                    DependentUpon = "dscommtable.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsComptes.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsComptes.cs"
+                />
+                <File
+                    RelPath = "dsComptes.cs"
+                    DependentUpon = "dsComptes.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsComptesJ.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsComptesJ.cs"
+                />
+                <File
+                    RelPath = "dsComptesJ.cs"
+                    DependentUpon = "dsComptesJ.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsConsoBoutique.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsConsoBoutique.cs"
+                />
+                <File
+                    RelPath = "dsConsoBoutique.cs"
+                    DependentUpon = "dsConsoBoutique.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsConsommationBoutique.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsConsommationBoutique.cs"
+                />
+                <File
+                    RelPath = "dsConsommationBoutique.cs"
+                    DependentUpon = "dsConsommationBoutique.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsCours.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsCours.cs"
+                />
+                <File
+                    RelPath = "dsCours.cs"
+                    DependentUpon = "dsCours.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsEmploesCours.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsEmploesCours.cs"
+                />
+                <File
+                    RelPath = "dsEmploesCours.cs"
+                    DependentUpon = "dsEmploesCours.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsEmployes.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsEmployes.cs"
+                />
+                <File
+                    RelPath = "dsEmployes.cs"
+                    DependentUpon = "dsEmployes.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsetmenus.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsetmenus.cs"
+                />
+                <File
+                    RelPath = "dsetmenus.cs"
+                    DependentUpon = "dsetmenus.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsFamilles.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsFamilles.cs"
+                />
+                <File
+                    RelPath = "dsFamilles.cs"
+                    DependentUpon = "dsFamilles.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsFamillesProduits.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsFamillesProduits.cs"
+                />
+                <File
+                    RelPath = "dsFamillesProduits.cs"
+                    DependentUpon = "dsFamillesProduits.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsinfosClients.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsinfosClients.cs"
+                />
+                <File
+                    RelPath = "dsinfosClients.cs"
+                    DependentUpon = "dsinfosClients.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsmenuprods.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsmenuprods.cs"
+                />
+                <File
+                    RelPath = "dsmenuprods.cs"
+                    DependentUpon = "dsmenuprods.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "Dsmenus.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "Dsmenus.cs"
+                />
+                <File
+                    RelPath = "Dsmenus.cs"
+                    DependentUpon = "Dsmenus.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsmenusProduits.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsmenusProduits.cs"
+                />
+                <File
+                    RelPath = "dsmenusProduits.cs"
+                    DependentUpon = "dsmenusProduits.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsmenuvin.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsmenuvin.cs"
+                />
+                <File
+                    RelPath = "dsmenuvin.cs"
+                    DependentUpon = "dsmenuvin.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsmenuvin.xsx"
+                    DependentUpon = "dsmenuvin.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "dsPersonnel.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsPersonnel.cs"
+                />
+                <File
+                    RelPath = "dsPersonnel.cs"
+                    DependentUpon = "dsPersonnel.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsPlat.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsPlat.cs"
+                />
+                <File
+                    RelPath = "dsPlat.cs"
+                    DependentUpon = "dsPlat.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsProdFamilies.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsProdFamilies.cs"
+                />
+                <File
+                    RelPath = "dsProdFamilies.cs"
+                    DependentUpon = "dsProdFamilies.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsProdFamiliesBoutique.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsProdFamiliesBoutique.cs"
+                />
+                <File
+                    RelPath = "dsProdFamiliesBoutique.cs"
+                    DependentUpon = "dsProdFamiliesBoutique.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSProds.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSProds.cs"
+                />
+                <File
+                    RelPath = "DSProds.cs"
+                    DependentUpon = "DSProds.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsprodsBAr.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsprodsBAr.cs"
+                />
+                <File
+                    RelPath = "dsprodsBAr.cs"
+                    DependentUpon = "dsprodsBAr.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsProdsBoutique.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsProdsBoutique.cs"
+                />
+                <File
+                    RelPath = "dsProdsBoutique.cs"
+                    DependentUpon = "dsProdsBoutique.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsproduitsreso.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsproduitsreso.cs"
+                />
+                <File
+                    RelPath = "dsproduitsreso.cs"
+                    DependentUpon = "dsproduitsreso.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsres.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsres.cs"
+                />
+                <File
+                    RelPath = "dsres.cs"
+                    DependentUpon = "dsres.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsReservTransats.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsReservTransats.cs"
+                />
+                <File
+                    RelPath = "dsReservTransats.cs"
+                    DependentUpon = "dsReservTransats.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsRoles.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsRoles.cs"
+                />
+                <File
+                    RelPath = "dsRoles.cs"
+                    DependentUpon = "dsRoles.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsStages.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsStages.cs"
+                />
+                <File
+                    RelPath = "dsStages.cs"
+                    DependentUpon = "dsStages.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "dsVin.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "dsVin.cs"
+                />
+                <File
+                    RelPath = "dsVin.cs"
+                    DependentUpon = "dsVin.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "Generale.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Generale.resx"
+                    DependentUpon = "Generale.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Locatable.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Locatable.resx"
+                    DependentUpon = "Locatable.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "NouvelleLocation.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "NouvelleLocation.resx"
+                    DependentUpon = "NouvelleLocation.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "NouvelleReservation.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "NouvelleReservation.resx"
+                    DependentUpon = "NouvelleReservation.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Participants.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Participants.resx"
+                    DependentUpon = "Participants.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Resto.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Snack.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Snack.resx"
+                    DependentUpon = "Snack.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Tables.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Tables.resx"
+                    DependentUpon = "Tables.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Ticket.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Ticket.resx"
+                    DependentUpon = "Ticket.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "TransatPrincipal.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "TransatPrincipal.resx"
+                    DependentUpon = "TransatPrincipal.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Transats.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+            </Include>
+        </Files>
+    </CSHARP>
+</VisualStudioProject>
+

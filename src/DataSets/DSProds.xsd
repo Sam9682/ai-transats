@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DSProds" targetNamespace="http://www.tempuri.org/DSProds.xsd" xmlns:mstns="http://www.tempuri.org/DSProds.xsd" xmlns="http://www.tempuri.org/DSProds.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DSProds" msdata:IsDataSet="true" msdata:Locale="fr-FR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="Produit">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Référence" type="xs:int" />
+              <xs:element name="Nom_x0020_Produit" type="xs:string" minOccurs="0" />
+              <xs:element name="Type_x0020_Produit" type="xs:string" minOccurs="0" />
+              <xs:element name="Prix_x0020_Unitaire" type="xs:float" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Produit" />
+      <xs:field xpath="mstns:Référence" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
