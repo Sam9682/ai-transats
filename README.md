@@ -20,7 +20,7 @@ TransactsFinal/
 │   └── ZenithPlage.mdb   # Secondary database
 ├── assets/               # Static assets
 │   └── App.ico          # Application icon
-├── config/              # Configuration files
+├── conf/                # Configuration files
 │   └── app.config       # Application configuration
 ├── bin/                 # Compiled binaries (Debug/Release)
 ├── obj/                 # Build artifacts

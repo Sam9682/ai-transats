@@ -1,0 +1,39 @@
+@model IEnumerable<TransactsWeb.Models.Employe>
+@{
+    ViewData["Title"] = "Employés";
+}
+
+<h2>Gestion des Employés</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Nouvel Employé</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Poste</th>
+            <th>Téléphone</th>
+            <th>Alias</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employe in Model)
+        {
+            <tr>
+                <td>@employe.NomEmploye</td>
+                <td>@employe.PrenomEmploye</td>
+                <td>@employe.Poste</td>
+                <td>@employe.TelEmploye</td>
+                <td>@employe.Alias</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@employe.NumEmploye" class="btn btn-sm btn-warning">Modifier</a>
+                    <a asp-action="Delete" asp-route-id="@employe.NumEmploye" class="btn btn-sm btn-danger" onclick="return confirm('Confirmer la suppression?')">Supprimer</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

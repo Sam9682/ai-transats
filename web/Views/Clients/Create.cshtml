@@ -10,7 +10,8 @@
                 <h4><i class="fas fa-user-plus"></i> Nouveau Client</h4>
             </div>
             <div class="card-body">
-                <form asp-action="Create">
+                <form asp-action="Create" method="post">
+                    @Html.AntiForgeryToken()
                     <div class="row">
                         <div class="col-md-6">
                             <div class="mb-3">

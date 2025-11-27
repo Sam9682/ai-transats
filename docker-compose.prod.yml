@@ -1,0 +1,14 @@
+services:
+  transacts-web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    volumes:
+      - transacts_data:/app/data
+
+volumes:
+  transacts_data:

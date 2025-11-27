@@ -44,17 +44,26 @@ namespace TransactsWeb.Controllers
 
         public IActionResult Create()
         {
+            Console.WriteLine("[CLIENTS] Create page requested");
             return View();
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Client client)
         {
+            Console.WriteLine($"[CLIENTS] Creating client: {client.NomClient} {client.PrenomClient}");
             if (ModelState.IsValid)
             {
                 _context.Clients.Add(client);
                 await _context.SaveChangesAsync();
+                Console.WriteLine($"[CLIENTS] Client created successfully with ID: {client.NumClient}");
                 return RedirectToAction(nameof(Index));
+            }
+            Console.WriteLine("[CLIENTS] Create failed - ModelState invalid");
+            foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+            {
+                Console.WriteLine($"[CLIENTS] Validation error: {error.ErrorMessage}");
             }
             return View(client);
         }
