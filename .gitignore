@@ -1,10 +1,45 @@
+# Build outputs
 bin/
 obj/
-*.db
+
+# Visual Studio
+.vs/
 *.user
 *.suo
-.vs/
+*.userosscache
+*.sln.docstates
+
+# Database files
+*.db
+*.mdb
+*.ldb
+*.sqlite
+*.sqlite3
+
+# Configuration files with secrets
+appsettings.Development.json
+appsettings.Production.json
+*.config.user
+ssl/
+
+# Package managers
 packages/
 node_modules/
 wwwroot/lib/
-appsettings.Development.json
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
