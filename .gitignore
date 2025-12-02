@@ -21,6 +21,7 @@ appsettings.Development.json
 appsettings.Production.json
 *.config.user
 ssl/
+ssl/*
 
 # Package managers
 packages/
