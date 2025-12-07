@@ -3,6 +3,7 @@ services:
     build:
       context: ./web
       dockerfile: Dockerfile
+    container_name: ai-transats-app-${USER_ID:-0}-${HTTPS_PORT:-6000}
     ports:
       - "${HTTPS_PORT:-6000}:8080"
     environment:
