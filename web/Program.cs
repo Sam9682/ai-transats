@@ -1,10 +1,12 @@
+using System.Runtime.CompilerServices;
+using System.Runtime.CompilerServices;
 using Microsoft.EntityFrameworkCore;
 using TransactsWeb.Data;
 using Microsoft.AspNetCore.Authentication.Cookies;
 
 try
 {
-Console.WriteLine("[STARTUP] Creating web application builder...");
+ConsoleLogger.WriteLine("Creating web application builder...");
 var builder = WebApplication.CreateBuilder(args);
 
 // Configure to listen on port 5000
@@ -12,105 +14,127 @@ builder.WebHost.ConfigureKestrel(options => {
     options.ListenAnyIP(5000);
 });
 
-Console.WriteLine("[STARTUP] Configuring logging...");
+ConsoleLogger.WriteLine("Configuring logging...");
 builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
 builder.Logging.SetMinimumLevel(LogLevel.Debug);
 
 // Add services to the container.
-Console.WriteLine("[STARTUP] Adding MVC services...");
+ConsoleLogger.WriteLine("Adding MVC services...");
 builder.Services.AddControllersWithViews();
 
 // Add Entity Framework
-Console.WriteLine("[STARTUP] Configuring Entity Framework with SQLite...");
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-Console.WriteLine($"[STARTUP] Connection string: {connectionString}");
+ConsoleLogger.WriteLine("Configuring Entity Framework with SQLite...");
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? "Data Source=transacts.db";
+ConsoleLogger.WriteLine($"Connection string: {connectionString}");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(connectionString));
 
 // Add Authentication
-Console.WriteLine("[STARTUP] Configuring authentication...");
+ConsoleLogger.WriteLine("Configuring authentication...");
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {
         options.LoginPath = "/Account/Login";
         options.LogoutPath = "/Account/Logout";
-        options.AccessDeniedPath = "/Account/AccessDenied";
+        options.AccessDeniedPath = "/Account/Login";
+        options.ExpireTimeSpan = TimeSpan.FromHours(8);
+        options.SlidingExpiration = true;
     });
 
-Console.WriteLine("[STARTUP] Building application...");
+ConsoleLogger.WriteLine("Building application...");
 var app = builder.Build();
-Console.WriteLine("[STARTUP] Application built successfully.");
+ConsoleLogger.WriteLine("Application built successfully.");
 
 // Auto-migrate database on startup
-Console.WriteLine($"[STARTUP] Environment: {app.Environment.EnvironmentName}");
-Console.WriteLine("[DATABASE] Starting database initialization...");
+ConsoleLogger.WriteLine($"Environment: {app.Environment.EnvironmentName}");
+ConsoleLogger.WriteLine("Starting database initialization...");
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
     try
     {
-        Console.WriteLine("[DATABASE] Ensuring database is created...");
+        ConsoleLogger.WriteLine("Ensuring database is created...");
         context.Database.EnsureCreated();
-        Console.WriteLine("[DATABASE] Database ready.");
+        
+        // Create default admin user if no employees exist
+        if (!context.Employes.Any())
+        {
+            ConsoleLogger.WriteLine("Creating default admin user...");
+            var adminUser = new TransactsWeb.Models.Employe
+            {
+                Alias = "admin",
+                MotDePasse = "admin",
+                NomEmploye = "Administrator",
+                PrenomEmploye = "System",
+                Poste = "Admin"
+            };
+            context.Employes.Add(adminUser);
+            context.SaveChanges();
+            ConsoleLogger.WriteLine("Default admin user created (admin/admin)");
+        }
+        
+        ConsoleLogger.WriteLine("Database ready.");
     }
     catch (Exception ex)
     {
-        Console.WriteLine($"[DATABASE] Warning: {ex.Message}");
-        Console.WriteLine("[DATABASE] Continuing without database...");
+        ConsoleLogger.WriteError($"Database initialization warning: {ex.Message}");
+        ConsoleLogger.WriteLine("Continuing without database...");
     }
 }
 
 // Configure the HTTP request pipeline.
-Console.WriteLine("[STARTUP] Configuring HTTP pipeline...");
+ConsoleLogger.WriteLine("Configuring HTTP pipeline...");
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
 }
-Console.WriteLine("[STARTUP] Skipping HTTPS redirection");
-Console.WriteLine("[STARTUP] Adding middleware: Static files");
+
+ConsoleLogger.WriteLine("Adding middleware: Static files");
 app.UseStaticFiles();
 
-Console.WriteLine("[STARTUP] Adding middleware: Routing");
+ConsoleLogger.WriteLine("Adding middleware: Routing");
 app.UseRouting();
 
 // Health check endpoint
 app.MapGet("/health", () => {
-    Console.WriteLine("[HEALTH] Health check requested");
+    ConsoleLogger.WriteLine("Health check requested");
     return Results.Ok(new { status = "healthy", timestamp = DateTime.UtcNow });
 });
 
-Console.WriteLine("[STARTUP] Adding middleware: Authentication");
+ConsoleLogger.WriteLine("Adding middleware: Authentication");
 app.UseAuthentication();
-Console.WriteLine("[STARTUP] Adding middleware: Authorization");
+ConsoleLogger.WriteLine("Adding middleware: Authorization");
 app.UseAuthorization();
 
-Console.WriteLine("[STARTUP] Mapping controller routes");
+ConsoleLogger.WriteLine("Mapping controller routes");
 try
 {
+    // Default route should go to Home/Index
     app.MapControllerRoute(
         name: "default",
         pattern: "{controller=Home}/{action=Index}/{id?}");
-    Console.WriteLine("[STARTUP] Routes mapped successfully");
+    ConsoleLogger.WriteLine("Routes mapped successfully");
 }
 catch (Exception ex)
 {
-    Console.WriteLine($"[STARTUP] Error mapping routes: {ex.Message}");
+    ConsoleLogger.WriteError($"Error mapping routes: {ex.Message}");
     throw;
 }
 
-Console.WriteLine("[STARTUP] Starting web server...");
-Console.WriteLine("[STARTUP] Application is ready to accept requests.");
+ConsoleLogger.WriteLine("Starting web server...");
+ConsoleLogger.WriteLine("Application is ready to accept requests.");
+ConsoleLogger.WriteLine("Default login: admin/admin");
 app.Run();
 }
 catch (Exception ex)
 {
-    Console.WriteLine($"[FATAL ERROR] Application failed to start: {ex.Message}");
-    Console.WriteLine($"[FATAL ERROR] Exception type: {ex.GetType().Name}");
-    Console.WriteLine($"[FATAL ERROR] Stack trace: {ex.StackTrace}");
+    ConsoleLogger.WriteError($"Application failed to start: {ex.Message}");
+    ConsoleLogger.WriteError($"Exception type: {ex.GetType().Name}");
+    ConsoleLogger.WriteError($"Stack trace: {ex.StackTrace}");
     if (ex.InnerException != null)
     {
-        Console.WriteLine($"[FATAL ERROR] Inner exception: {ex.InnerException.Message}");
+        ConsoleLogger.WriteError($"Inner exception: {ex.InnerException.Message}");
     }
     throw;
 }

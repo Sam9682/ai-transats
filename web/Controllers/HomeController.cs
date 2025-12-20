@@ -5,7 +5,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TransactsWeb.Controllers
 {
-    [Authorize]
     public class HomeController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -17,6 +16,12 @@ namespace TransactsWeb.Controllers
 
         public async Task<IActionResult> Index()
         {
+            // If user is not authenticated, redirect to login
+            if (!User.Identity?.IsAuthenticated ?? true)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             var stats = new
             {
                 TotalClients = await _context.Clients.CountAsync(),
@@ -29,31 +34,37 @@ namespace TransactsWeb.Controllers
             return View();
         }
 
+        [Authorize]
         public IActionResult Plage()
         {
             return RedirectToAction("Index", "Transats");
         }
 
+        [Authorize]
         public IActionResult Restaurant()
         {
             return RedirectToAction("Index", "Produits", new { type = "Restaurant" });
         }
 
+        [Authorize]
         public IActionResult Bar()
         {
             return RedirectToAction("Index", "Produits", new { type = "Bar" });
         }
 
+        [Authorize]
         public IActionResult Snack()
         {
             return RedirectToAction("Index", "Produits", new { type = "Snack" });
         }
 
+        [Authorize]
         public IActionResult Boutique()
         {
             return RedirectToAction("Index", "Produits", new { type = "Boutique" });
         }
 
+        [Authorize]
         public IActionResult BaseNautique()
         {
             return RedirectToAction("Index", "Produits", new { type = "BaseNautique" });
