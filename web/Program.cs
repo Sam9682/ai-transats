@@ -1,8 +1,7 @@
-using System.Runtime.CompilerServices;
-using System.Runtime.CompilerServices;
 using Microsoft.EntityFrameworkCore;
 using TransactsWeb.Data;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using TransactsWeb;
 
 try
 {
