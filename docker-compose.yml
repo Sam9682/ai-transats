@@ -1,5 +1,5 @@
 services:
-  transats-app:
+  app:
     build:
       context: ./web
       dockerfile: Dockerfile
@@ -22,7 +22,7 @@ services:
       - ./ssl/fullchain.pem:/etc/ssl/certs/fullchain.pem:ro
       - ./ssl/privkey.pem:/etc/ssl/private/privkey.pem:ro
     depends_on:
-      - transats-app
+      - app
     restart: unless-stopped
 
 volumes:
