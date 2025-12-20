@@ -39,4 +39,4 @@ firefox http://localhost:5000
 
 ## Login
 - Username: admin
-- Password: admin
+- Password: password

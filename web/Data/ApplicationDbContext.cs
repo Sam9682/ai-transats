@@ -38,7 +38,7 @@ namespace TransactsWeb.Data
 
             // Seed initial data
             modelBuilder.Entity<Employe>().HasData(
-                new Employe { NumEmploye = 1, NomEmploye = "Admin", PrenomEmploye = "System", Alias = "admin", MotDePasse = "admin", Poste = "Administrateur" }
+                new Employe { NumEmploye = 1, NomEmploye = "Admin", PrenomEmploye = "System", Alias = "admin", MotDePasse = "password", Poste = "Administrateur" }
             );
         }
     }
