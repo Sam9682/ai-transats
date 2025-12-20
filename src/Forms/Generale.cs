@@ -398,7 +398,7 @@ namespace Transacts
 			this.rdPrenCl.Name = "rdPrenCl";
 			this.rdPrenCl.Size = new System.Drawing.Size(64, 16);
 			this.rdPrenCl.TabIndex = 103;
-			this.rdPrenCl.Text = "Prénom";
+			this.rdPrenCl.Text = "Prï¿½nom";
 			// 
 			// rdNomCl
 			// 
@@ -1031,7 +1031,7 @@ namespace Transacts
 			this.suppclient.Name = "suppclient";
 			this.suppclient.Size = new System.Drawing.Size(272, 40);
 			this.suppclient.TabIndex = 96;
-			this.suppclient.Text = "Supprimer Sélection";
+			this.suppclient.Text = "Supprimer Sï¿½lection";
 			this.suppclient.Click += new System.EventHandler(this.suppclient_Click_1);
 			// 
 			// addClient
@@ -1068,7 +1068,7 @@ namespace Transacts
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(73, 15);
 			this.label3.TabIndex = 5;
-			this.label3.Text = "Date Clôture";
+			this.label3.Text = "Date Clï¿½ture";
 			// 
 			// label2
 			// 
@@ -1077,7 +1077,7 @@ namespace Transacts
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(94, 15);
 			this.label2.TabIndex = 4;
-			this.label2.Text = "Numéro Compte";
+			this.label2.Text = "Numï¿½ro Compte";
 			// 
 			// label1
 			// 
@@ -1153,7 +1153,7 @@ namespace Transacts
 			this.rdPrenEmp.Name = "rdPrenEmp";
 			this.rdPrenEmp.Size = new System.Drawing.Size(72, 16);
 			this.rdPrenEmp.TabIndex = 106;
-			this.rdPrenEmp.Text = "Prénom";
+			this.rdPrenEmp.Text = "Prï¿½nom";
 			// 
 			// rdNomEmp
 			// 
@@ -1207,7 +1207,7 @@ namespace Transacts
 			this.button92.Name = "button92";
 			this.button92.Size = new System.Drawing.Size(128, 40);
 			this.button92.TabIndex = 102;
-			this.button92.Text = "Supprimer Sélection";
+			this.button92.Text = "Supprimer Sï¿½lection";
 			// 
 			// tabControl3
 			// 
@@ -1889,8 +1889,8 @@ namespace Transacts
 																										new System.Data.Common.DataTableMapping("Table", "Client", new System.Data.Common.DataColumnMapping[] {
 																																																				  new System.Data.Common.DataColumnMapping("Identifiant Client", "Identifiant Client"),
 																																																				  new System.Data.Common.DataColumnMapping("Nom Client", "Nom Client"),
-																																																				  new System.Data.Common.DataColumnMapping("Prénom Client", "Prénom Client"),
-																																																				  new System.Data.Common.DataColumnMapping("Tél / Mobile", "Tél / Mobile"),
+																																																				  new System.Data.Common.DataColumnMapping("Prï¿½nom Client", "Prï¿½nom Client"),
+																																																				  new System.Data.Common.DataColumnMapping("Tï¿½l / Mobile", "Tï¿½l / Mobile"),
 																																																				  new System.Data.Common.DataColumnMapping("Adresse", "Adresse"),
 																																																				  new System.Data.Common.DataColumnMapping("e-Mail", "e-Mail")})});
 			this.oleDbDataAdapter1.UpdateCommand = this.oleDbUpdateCommand1;
@@ -1906,10 +1906,10 @@ namespace Transacts
 			this.oleDbDeleteCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_MailClient1", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "e-Mail", System.Data.DataRowVersion.Original, null));
 			this.oleDbDeleteCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_NomClient", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Nom Client", System.Data.DataRowVersion.Original, null));
 			this.oleDbDeleteCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_NomClient1", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Nom Client", System.Data.DataRowVersion.Original, null));
-			this.oleDbDeleteCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_PrenomClient", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Prénom Client", System.Data.DataRowVersion.Original, null));
-			this.oleDbDeleteCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_PrenomClient1", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Prénom Client", System.Data.DataRowVersion.Original, null));
-			this.oleDbDeleteCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_TelClient", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Tél / Mobile", System.Data.DataRowVersion.Original, null));
-			this.oleDbDeleteCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_TelClient1", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Tél / Mobile", System.Data.DataRowVersion.Original, null));
+			this.oleDbDeleteCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_PrenomClient", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Prï¿½nom Client", System.Data.DataRowVersion.Original, null));
+			this.oleDbDeleteCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_PrenomClient1", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Prï¿½nom Client", System.Data.DataRowVersion.Original, null));
+			this.oleDbDeleteCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_TelClient", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Tï¿½l / Mobile", System.Data.DataRowVersion.Original, null));
+			this.oleDbDeleteCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_TelClient1", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Tï¿½l / Mobile", System.Data.DataRowVersion.Original, null));
 			// 
 			// oleDbConnection1
 			// 
@@ -1922,15 +1922,15 @@ namespace Transacts
 			this.oleDbInsertCommand1.Connection = this.oleDbConnection1;
 			this.oleDbInsertCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("NumClient", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((System.Byte)(10)), ((System.Byte)(0)), "Identifiant Client", System.Data.DataRowVersion.Current, null));
 			this.oleDbInsertCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("NomClient", System.Data.OleDb.OleDbType.VarWChar, 50, "Nom Client"));
-			this.oleDbInsertCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("PrenomClient", System.Data.OleDb.OleDbType.VarWChar, 50, "Prénom Client"));
-			this.oleDbInsertCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("TelClient", System.Data.OleDb.OleDbType.VarWChar, 50, "Tél / Mobile"));
+			this.oleDbInsertCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("PrenomClient", System.Data.OleDb.OleDbType.VarWChar, 50, "Prï¿½nom Client"));
+			this.oleDbInsertCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("TelClient", System.Data.OleDb.OleDbType.VarWChar, 50, "Tï¿½l / Mobile"));
 			this.oleDbInsertCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("AdresseClient", System.Data.OleDb.OleDbType.VarWChar, 50, "Adresse"));
 			this.oleDbInsertCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("MailClient", System.Data.OleDb.OleDbType.VarWChar, 50, "e-Mail"));
 			// 
 			// oleDbSelectCommand1
 			// 
 			this.oleDbSelectCommand1.CommandText = "SELECT NumClient AS [Identifiant Client], NomClient AS [Nom Client], PrenomClient" +
-				" AS [Prénom Client], TelClient AS [Tél / Mobile], AdresseClient AS Adresse, Mail" +
+				" AS [Prï¿½nom Client], TelClient AS [Tï¿½l / Mobile], AdresseClient AS Adresse, Mail" +
 				"Client AS [e-Mail] FROM Client";
 			this.oleDbSelectCommand1.Connection = this.oleDbConnection1;
 			// 
@@ -1940,8 +1940,8 @@ namespace Transacts
 			this.oleDbUpdateCommand1.Connection = this.oleDbConnection1;
 			this.oleDbUpdateCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("NumClient", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((System.Byte)(10)), ((System.Byte)(0)), "Identifiant Client", System.Data.DataRowVersion.Current, null));
 			this.oleDbUpdateCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("NomClient", System.Data.OleDb.OleDbType.VarWChar, 50, "Nom Client"));
-			this.oleDbUpdateCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("PrenomClient", System.Data.OleDb.OleDbType.VarWChar, 50, "Prénom Client"));
-			this.oleDbUpdateCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("TelClient", System.Data.OleDb.OleDbType.VarWChar, 50, "Tél / Mobile"));
+			this.oleDbUpdateCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("PrenomClient", System.Data.OleDb.OleDbType.VarWChar, 50, "Prï¿½nom Client"));
+			this.oleDbUpdateCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("TelClient", System.Data.OleDb.OleDbType.VarWChar, 50, "Tï¿½l / Mobile"));
 			this.oleDbUpdateCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("AdresseClient", System.Data.OleDb.OleDbType.VarWChar, 50, "Adresse"));
 			this.oleDbUpdateCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("MailClient", System.Data.OleDb.OleDbType.VarWChar, 50, "e-Mail"));
 			this.oleDbUpdateCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_NumClient", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((System.Byte)(10)), ((System.Byte)(0)), "Identifiant Client", System.Data.DataRowVersion.Original, null));
@@ -1951,10 +1951,10 @@ namespace Transacts
 			this.oleDbUpdateCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_MailClient1", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "e-Mail", System.Data.DataRowVersion.Original, null));
 			this.oleDbUpdateCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_NomClient", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Nom Client", System.Data.DataRowVersion.Original, null));
 			this.oleDbUpdateCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_NomClient1", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Nom Client", System.Data.DataRowVersion.Original, null));
-			this.oleDbUpdateCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_PrenomClient", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Prénom Client", System.Data.DataRowVersion.Original, null));
-			this.oleDbUpdateCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_PrenomClient1", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Prénom Client", System.Data.DataRowVersion.Original, null));
-			this.oleDbUpdateCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_TelClient", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Tél / Mobile", System.Data.DataRowVersion.Original, null));
-			this.oleDbUpdateCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_TelClient1", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Tél / Mobile", System.Data.DataRowVersion.Original, null));
+			this.oleDbUpdateCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_PrenomClient", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Prï¿½nom Client", System.Data.DataRowVersion.Original, null));
+			this.oleDbUpdateCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_PrenomClient1", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Prï¿½nom Client", System.Data.DataRowVersion.Original, null));
+			this.oleDbUpdateCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_TelClient", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Tï¿½l / Mobile", System.Data.DataRowVersion.Original, null));
+			this.oleDbUpdateCommand1.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_TelClient1", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Tï¿½l / Mobile", System.Data.DataRowVersion.Original, null));
 			// 
 			// oleDbDataAdapter2
 			// 
@@ -1963,9 +1963,9 @@ namespace Transacts
 			this.oleDbDataAdapter2.SelectCommand = this.oleDbSelectCommand2;
 			this.oleDbDataAdapter2.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
 																										new System.Data.Common.DataTableMapping("Table", "Employe", new System.Data.Common.DataColumnMapping[] {
-																																																				   new System.Data.Common.DataColumnMapping("Identifiant Employé", "Identifiant Employé"),
-																																																				   new System.Data.Common.DataColumnMapping("Nom Employé", "Nom Employé"),
-																																																				   new System.Data.Common.DataColumnMapping("Prénom Employé", "Prénom Employé"),
+																																																				   new System.Data.Common.DataColumnMapping("Identifiant Employï¿½", "Identifiant Employï¿½"),
+																																																				   new System.Data.Common.DataColumnMapping("Nom Employï¿½", "Nom Employï¿½"),
+																																																				   new System.Data.Common.DataColumnMapping("Prï¿½nom Employï¿½", "Prï¿½nom Employï¿½"),
 																																																				   new System.Data.Common.DataColumnMapping("Tel / Mobile", "Tel / Mobile"),
 																																																				   new System.Data.Common.DataColumnMapping("Poste Courant", "Poste Courant"),
 																																																				   new System.Data.Common.DataColumnMapping("Salaire", "Salaire")})});
@@ -1975,11 +1975,11 @@ namespace Transacts
 			// 
 			this.oleDbDeleteCommand2.CommandText = @"DELETE FROM Employe WHERE (NumEmploye = ?) AND (NomEmploye = ? OR ? IS NULL AND NomEmploye IS NULL) AND (PrenomEmploye = ? OR ? IS NULL AND PrenomEmploye IS NULL) AND (Salaire = ? OR ? IS NULL AND Salaire IS NULL) AND (TelEmploye = ? OR ? IS NULL AND TelEmploye IS NULL) AND (poste = ? OR ? IS NULL AND poste IS NULL)";
 			this.oleDbDeleteCommand2.Connection = this.oleDbConnection1;
-			this.oleDbDeleteCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_NumEmploye", System.Data.OleDb.OleDbType.SmallInt, 0, System.Data.ParameterDirection.Input, false, ((System.Byte)(5)), ((System.Byte)(0)), "Identifiant Employé", System.Data.DataRowVersion.Original, null));
-			this.oleDbDeleteCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_NomEmploye", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Nom Employé", System.Data.DataRowVersion.Original, null));
-			this.oleDbDeleteCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_NomEmploye1", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Nom Employé", System.Data.DataRowVersion.Original, null));
-			this.oleDbDeleteCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_PrenomEmploye", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Prénom Employé", System.Data.DataRowVersion.Original, null));
-			this.oleDbDeleteCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_PrenomEmploye1", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Prénom Employé", System.Data.DataRowVersion.Original, null));
+			this.oleDbDeleteCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_NumEmploye", System.Data.OleDb.OleDbType.SmallInt, 0, System.Data.ParameterDirection.Input, false, ((System.Byte)(5)), ((System.Byte)(0)), "Identifiant Employï¿½", System.Data.DataRowVersion.Original, null));
+			this.oleDbDeleteCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_NomEmploye", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Nom Employï¿½", System.Data.DataRowVersion.Original, null));
+			this.oleDbDeleteCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_NomEmploye1", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Nom Employï¿½", System.Data.DataRowVersion.Original, null));
+			this.oleDbDeleteCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_PrenomEmploye", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Prï¿½nom Employï¿½", System.Data.DataRowVersion.Original, null));
+			this.oleDbDeleteCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_PrenomEmploye1", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Prï¿½nom Employï¿½", System.Data.DataRowVersion.Original, null));
 			this.oleDbDeleteCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_Salaire", System.Data.OleDb.OleDbType.Single, 0, System.Data.ParameterDirection.Input, false, ((System.Byte)(7)), ((System.Byte)(0)), "Salaire", System.Data.DataRowVersion.Original, null));
 			this.oleDbDeleteCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_Salaire1", System.Data.OleDb.OleDbType.Single, 0, System.Data.ParameterDirection.Input, false, ((System.Byte)(7)), ((System.Byte)(0)), "Salaire", System.Data.DataRowVersion.Original, null));
 			this.oleDbDeleteCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_TelEmploye", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Tel / Mobile", System.Data.DataRowVersion.Original, null));
@@ -1992,17 +1992,17 @@ namespace Transacts
 			this.oleDbInsertCommand2.CommandText = "INSERT INTO Employe(NumEmploye, NomEmploye, PrenomEmploye, TelEmploye, poste, Sal" +
 				"aire) VALUES (?, ?, ?, ?, ?, ?)";
 			this.oleDbInsertCommand2.Connection = this.oleDbConnection1;
-			this.oleDbInsertCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("NumEmploye", System.Data.OleDb.OleDbType.SmallInt, 0, System.Data.ParameterDirection.Input, false, ((System.Byte)(5)), ((System.Byte)(0)), "Identifiant Employé", System.Data.DataRowVersion.Current, null));
-			this.oleDbInsertCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("NomEmploye", System.Data.OleDb.OleDbType.VarWChar, 50, "Nom Employé"));
-			this.oleDbInsertCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("PrenomEmploye", System.Data.OleDb.OleDbType.VarWChar, 50, "Prénom Employé"));
+			this.oleDbInsertCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("NumEmploye", System.Data.OleDb.OleDbType.SmallInt, 0, System.Data.ParameterDirection.Input, false, ((System.Byte)(5)), ((System.Byte)(0)), "Identifiant Employï¿½", System.Data.DataRowVersion.Current, null));
+			this.oleDbInsertCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("NomEmploye", System.Data.OleDb.OleDbType.VarWChar, 50, "Nom Employï¿½"));
+			this.oleDbInsertCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("PrenomEmploye", System.Data.OleDb.OleDbType.VarWChar, 50, "Prï¿½nom Employï¿½"));
 			this.oleDbInsertCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("TelEmploye", System.Data.OleDb.OleDbType.VarWChar, 50, "Tel / Mobile"));
 			this.oleDbInsertCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("poste", System.Data.OleDb.OleDbType.VarWChar, 50, "Poste Courant"));
 			this.oleDbInsertCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("Salaire", System.Data.OleDb.OleDbType.Single, 0, System.Data.ParameterDirection.Input, false, ((System.Byte)(7)), ((System.Byte)(0)), "Salaire", System.Data.DataRowVersion.Current, null));
 			// 
 			// oleDbSelectCommand2
 			// 
-			this.oleDbSelectCommand2.CommandText = "SELECT NumEmploye AS [Identifiant Employé], NomEmploye AS [Nom Employé], PrenomEm" +
-				"ploye AS [Prénom Employé], TelEmploye AS [Tel / Mobile], poste AS [Poste Courant" +
+			this.oleDbSelectCommand2.CommandText = "SELECT NumEmploye AS [Identifiant Employï¿½], NomEmploye AS [Nom Employï¿½], PrenomEm" +
+				"ploye AS [Prï¿½nom Employï¿½], TelEmploye AS [Tel / Mobile], poste AS [Poste Courant" +
 				"], Salaire AS Salaire FROM Employe";
 			this.oleDbSelectCommand2.Connection = this.oleDbConnection1;
 			// 
@@ -2010,17 +2010,17 @@ namespace Transacts
 			// 
 			this.oleDbUpdateCommand2.CommandText = @"UPDATE Employe SET NumEmploye = ?, NomEmploye = ?, PrenomEmploye = ?, TelEmploye = ?, poste = ?, Salaire = ? WHERE (NumEmploye = ?) AND (NomEmploye = ? OR ? IS NULL AND NomEmploye IS NULL) AND (PrenomEmploye = ? OR ? IS NULL AND PrenomEmploye IS NULL) AND (Salaire = ? OR ? IS NULL AND Salaire IS NULL) AND (TelEmploye = ? OR ? IS NULL AND TelEmploye IS NULL) AND (poste = ? OR ? IS NULL AND poste IS NULL)";
 			this.oleDbUpdateCommand2.Connection = this.oleDbConnection1;
-			this.oleDbUpdateCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("NumEmploye", System.Data.OleDb.OleDbType.SmallInt, 0, System.Data.ParameterDirection.Input, false, ((System.Byte)(5)), ((System.Byte)(0)), "Identifiant Employé", System.Data.DataRowVersion.Current, null));
-			this.oleDbUpdateCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("NomEmploye", System.Data.OleDb.OleDbType.VarWChar, 50, "Nom Employé"));
-			this.oleDbUpdateCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("PrenomEmploye", System.Data.OleDb.OleDbType.VarWChar, 50, "Prénom Employé"));
+			this.oleDbUpdateCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("NumEmploye", System.Data.OleDb.OleDbType.SmallInt, 0, System.Data.ParameterDirection.Input, false, ((System.Byte)(5)), ((System.Byte)(0)), "Identifiant Employï¿½", System.Data.DataRowVersion.Current, null));
+			this.oleDbUpdateCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("NomEmploye", System.Data.OleDb.OleDbType.VarWChar, 50, "Nom Employï¿½"));
+			this.oleDbUpdateCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("PrenomEmploye", System.Data.OleDb.OleDbType.VarWChar, 50, "Prï¿½nom Employï¿½"));
 			this.oleDbUpdateCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("TelEmploye", System.Data.OleDb.OleDbType.VarWChar, 50, "Tel / Mobile"));
 			this.oleDbUpdateCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("poste", System.Data.OleDb.OleDbType.VarWChar, 50, "Poste Courant"));
 			this.oleDbUpdateCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("Salaire", System.Data.OleDb.OleDbType.Single, 0, System.Data.ParameterDirection.Input, false, ((System.Byte)(7)), ((System.Byte)(0)), "Salaire", System.Data.DataRowVersion.Current, null));
-			this.oleDbUpdateCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_NumEmploye", System.Data.OleDb.OleDbType.SmallInt, 0, System.Data.ParameterDirection.Input, false, ((System.Byte)(5)), ((System.Byte)(0)), "Identifiant Employé", System.Data.DataRowVersion.Original, null));
-			this.oleDbUpdateCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_NomEmploye", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Nom Employé", System.Data.DataRowVersion.Original, null));
-			this.oleDbUpdateCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_NomEmploye1", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Nom Employé", System.Data.DataRowVersion.Original, null));
-			this.oleDbUpdateCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_PrenomEmploye", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Prénom Employé", System.Data.DataRowVersion.Original, null));
-			this.oleDbUpdateCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_PrenomEmploye1", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Prénom Employé", System.Data.DataRowVersion.Original, null));
+			this.oleDbUpdateCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_NumEmploye", System.Data.OleDb.OleDbType.SmallInt, 0, System.Data.ParameterDirection.Input, false, ((System.Byte)(5)), ((System.Byte)(0)), "Identifiant Employï¿½", System.Data.DataRowVersion.Original, null));
+			this.oleDbUpdateCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_NomEmploye", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Nom Employï¿½", System.Data.DataRowVersion.Original, null));
+			this.oleDbUpdateCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_NomEmploye1", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Nom Employï¿½", System.Data.DataRowVersion.Original, null));
+			this.oleDbUpdateCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_PrenomEmploye", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Prï¿½nom Employï¿½", System.Data.DataRowVersion.Original, null));
+			this.oleDbUpdateCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_PrenomEmploye1", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Prï¿½nom Employï¿½", System.Data.DataRowVersion.Original, null));
 			this.oleDbUpdateCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_Salaire", System.Data.OleDb.OleDbType.Single, 0, System.Data.ParameterDirection.Input, false, ((System.Byte)(7)), ((System.Byte)(0)), "Salaire", System.Data.DataRowVersion.Original, null));
 			this.oleDbUpdateCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_Salaire1", System.Data.OleDb.OleDbType.Single, 0, System.Data.ParameterDirection.Input, false, ((System.Byte)(7)), ((System.Byte)(0)), "Salaire", System.Data.DataRowVersion.Original, null));
 			this.oleDbUpdateCommand2.Parameters.Add(new System.Data.OleDb.OleDbParameter("Original_TelEmploye", System.Data.OleDb.OleDbType.VarWChar, 50, System.Data.ParameterDirection.Input, false, ((System.Byte)(0)), ((System.Byte)(0)), "Tel / Mobile", System.Data.DataRowVersion.Original, null));
@@ -2073,18 +2073,18 @@ namespace Transacts
 			this.menuItem1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
 																					  this.menuItem2,
 																					  this.menuItem3});
-			this.menuItem1.Text = "Paramètres";
+			this.menuItem1.Text = "Paramï¿½tres";
 			// 
 			// menuItem2
 			// 
 			this.menuItem2.Index = 0;
-			this.menuItem2.Text = "Police des caractères";
+			this.menuItem2.Text = "Police des caractï¿½res";
 			this.menuItem2.Click += new System.EventHandler(this.menuItem2_Click);
 			// 
 			// menuItem3
 			// 
 			this.menuItem3.Index = 1;
-			this.menuItem3.Text = "Infos Société";
+			this.menuItem3.Text = "Infos Sociï¿½tï¿½";
 			// 
 			// Generale
 			// 
@@ -2105,7 +2105,7 @@ namespace Transacts
 			this.MaximizeBox = false;
 			this.Menu = this.mainMenu1;
 			this.Name = "Generale";
-			this.Text = "Générale";
+			this.Text = "Gï¿½nï¿½rale";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 			this.Load += new System.EventHandler(this.Generale_Load);
 			this.Activated += new System.EventHandler(this.Generale_Activated);
@@ -2132,15 +2132,19 @@ namespace Transacts
 		OleDbConnection conn;
 		private void Generale_Load(object sender, System.EventArgs e)
 		{
+			ConsoleLogger.WriteLine("Starting Generale form load");
 			conn =new OleDbConnection(strconn);
 			
 			try
 			{
+				ConsoleLogger.WriteLine("Opening database connections");
 				conn.Open();
 				oleDbConnection1.Open();
+				ConsoleLogger.WriteLine("Database connections opened successfully");
 			}
 			catch(Exception ex) 
 			{
+				ConsoleLogger.WriteError($"Failed to open database connections: {ex.Message}");
 				MessageBox.Show(ex.ToString());
 			}
 			
@@ -2401,8 +2405,8 @@ namespace Transacts
 		{
 			
 			string STRSQL ="Select NumClient AS [Identifiant Client], NomClient AS [Nom Client], "+
-				" PrenomClient AS [Prénom Client],"+
-				" TelClient AS [Tél / Mobile],"+
+				" PrenomClient AS [Prï¿½nom Client],"+
+				" TelClient AS [Tï¿½l / Mobile],"+
 				" AdresseClient AS  [Adresse],"+
 				" MailClient AS [e-Mail]"+
 				"from Client Where "+ FilterCol.ToString() +" Like '%"+Value+"%'";
@@ -2445,9 +2449,9 @@ namespace Transacts
 		{
 			
 			string STRSQL ="SELECT "+
-				"NumEmploye AS [Identifiant Employé], "+ 
-				"NomEmploye AS [Nom Employé], "+ 
-				"PrenomEmploye AS [Prénom Employé], "+
+				"NumEmploye AS [Identifiant Employï¿½], "+ 
+				"NomEmploye AS [Nom Employï¿½], "+ 
+				"PrenomEmploye AS [Prï¿½nom Employï¿½], "+
 				"TelEmploye AS [Tel / Mobile], "+
 				"poste AS [Poste Courant], "+
 				"Salaire AS Salaire "+
