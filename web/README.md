@@ -56,7 +56,7 @@ Application web complète qui reproduit exactement les fonctionnalités de l'app
 
 5. **Accéder à l'application**
    - Ouvrir un navigateur et aller à `https://localhost:5001`
-   - Se connecter avec : admin/admin
+   - Se connecter avec : admin/password
 
 ## Structure du Projet
 

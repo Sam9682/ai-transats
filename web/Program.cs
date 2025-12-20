@@ -63,14 +63,14 @@ using (var scope = app.Services.CreateScope())
             var adminUser = new TransactsWeb.Models.Employe
             {
                 Alias = "admin",
-                MotDePasse = "admin",
+                MotDePasse = "password",
                 NomEmploye = "Administrator",
                 PrenomEmploye = "System",
                 Poste = "Admin"
             };
             context.Employes.Add(adminUser);
             context.SaveChanges();
-            ConsoleLogger.WriteLine("Default admin user created (admin/admin)");
+            ConsoleLogger.WriteLine("Default admin user created (admin/password)");
         }
         
         ConsoleLogger.WriteLine("Database ready.");
@@ -123,7 +123,7 @@ catch (Exception ex)
 
 ConsoleLogger.WriteLine("Starting web server...");
 ConsoleLogger.WriteLine("Application is ready to accept requests.");
-ConsoleLogger.WriteLine("Default login: admin/admin");
+ConsoleLogger.WriteLine("Default login: admin/password");
 app.Run();
 }
 catch (Exception ex)

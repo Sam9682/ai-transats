@@ -22,7 +22,7 @@ if %errorlevel% equ 0 (
     echo Web App: http://localhost:5000
     echo Database: localhost:1433
     echo.
-    echo Login: admin/admin
+    echo Login: admin/password
     echo.
     echo Press any key to view logs...
     pause >nul

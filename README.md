@@ -72,7 +72,7 @@ This project contains both the original Windows Forms application and a new comp
 3. Run `dotnet ef database update` to create the database
 4. Run `dotnet run` to start the application
 5. Open browser to `https://localhost:5001`
-6. Login with: **admin/admin**
+6. Login with: **admin/password**
 
 ## Mobile Compatibility
 
