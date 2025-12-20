@@ -19,7 +19,7 @@ if %errorlevel% equ 0 (
     echo.
     echo ✓ Application started successfully!
     echo.
-    echo Web App: http://localhost:8080
+    echo Web App: http://localhost:5000
     echo Database: localhost:1433
     echo.
     echo Login: admin/admin

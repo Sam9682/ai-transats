@@ -4,7 +4,7 @@
 
 ### 1. "Docker is not running" Error
 
-**Problem**: `unable to get image 'ai-transats-transacts-web': error during connect`
+**Problem**: `unable to get image 'ai-transats-transats-app': error during connect`
 
 **Solutions**:
 1. **Start Docker Desktop manually**:
@@ -23,12 +23,12 @@
 
 ### 2. Port Already in Use
 
-**Problem**: `Port 8080 is already allocated`
+**Problem**: `Port 5000 is already allocated`
 
 **Solution**:
 ```cmd
 docker-compose down
-netstat -ano | findstr :8080
+netstat -ano | findstr :5000
 taskkill /PID <PID_NUMBER> /F
 ```
 
@@ -106,4 +106,4 @@ If automated scripts fail:
    ```cmd
    docker-compose up -d --build
    ```
-5. **Access application**: http://localhost:8080
+5. **Access application**: http://localhost:5000

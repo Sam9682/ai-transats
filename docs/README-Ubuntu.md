@@ -34,7 +34,7 @@ docker-compose logs -f
 docker-compose down
 
 # Access application
-firefox http://localhost:8080
+firefox http://localhost:5000
 ```
 
 ## Login

@@ -7,9 +7,9 @@ try
 Console.WriteLine("[STARTUP] Creating web application builder...");
 var builder = WebApplication.CreateBuilder(args);
 
-// Configure to listen on port 8080
+// Configure to listen on port 5000
 builder.WebHost.ConfigureKestrel(options => {
-    options.ListenAnyIP(8080);
+    options.ListenAnyIP(5000);
 });
 
 Console.WriteLine("[STARTUP] Configuring logging...");
